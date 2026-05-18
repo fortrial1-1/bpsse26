@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organik - Navigation Buttons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .nav-button {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .button-text {
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .button-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .nav-button {
+                padding: 20px;
+            }
+
+            .button-icon {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+
+            .button-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-grid">
+            <a href="https://example.com/page1" class="nav-button" target="_blank">
+                <div class="button-icon">📄</div>
+                <div class="button-text">Page 1</div>
+            </a>
+            <a href="https://example.com/page2" class="nav-button" target="_blank">
+                <div class="button-icon">📊</div>
+                <div class="button-text">Page 2</div>
+            </a>
+            <a href="https://example.com/page3" class="nav-button" target="_blank">
+                <div class="button-icon">⚙️</div>
+                <div class="button-text">Page 3</div>
+            </a>
+            <a href="https://example.com/page4" class="nav-button" target="_blank">
+                <div class="button-icon">👤</div>
+                <div class="button-text">Page 4</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
